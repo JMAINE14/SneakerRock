@@ -1,0 +1,44 @@
+﻿@model List<SneakerRockMVC.Models.Sneaker>
+
+<h1>My Collection</h1>
+
+<p><a asp-controller="Collection" asp-action="Add">Add Sneakers</a></p>
+
+@if (Model.Count == 0)
+{
+    <p>No Sneakers yet</p>
+}
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Remove</th>
+            <th>Brand</th>
+            <th>BrandName</th>
+            <th>Style</th>
+            <th>Colorway</th>
+            <th>Edit</th>
+        </tr>
+        @foreach (var sneaker in Model)
+        {
+            <tr>
+                <td><input type="checkbox" name="sneaker.Ids" value="@sneaker.ID" /></td>
+                <td>@sneaker.ColorWay.Style.BrandName.Brand</td>
+                <td>@sneaker.ColorWay.Style.BrandName</td>
+                <td>@sneaker.ColorWay.Style</td>
+                <td>@sneaker.ColorWay</td>
+               <!-- <td>
+                    if ((await AuthorizationService.AuthorizeAsync(User, sneaker, SneakerOperations.Update)).Succeeded)
+                    {
+                        <a asp-controller="Sneaker" asp-action="Edit" asp-route-sneakerId="sneaker.ID">edit</a>
+                    }
+                    else
+                    {
+                        <p>-</p>
+                    }
+                </td> -->
+            </tr>
+        }
+    </table>
+    <input type="submit" value="Remove Selected" />
+</form>

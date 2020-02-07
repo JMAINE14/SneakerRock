@@ -1,0 +1,38 @@
+﻿@model List<SneakerRockMVC.Models.Sneaker>
+
+<h1>@ViewBag.Title</h1>
+    <br>
+
+    <p>No Sneakers Yet</p>
+    <br>
+
+<table class="table">
+
+    <tr>
+        <th><a asp-controller="Collection" asp-action="Collection">Collection</a></th>
+        <th><a asp-controller="Brand" asp-action="Brand">Brand</a></th>
+        <th><a asp-controller="BrandName" asp-action="BrandName">Brand Name</a></th>
+        <th><a asp-controller="Style" asp-action="Style">Style</a></th>
+        <th><a asp-controller="Colorway" asp-action="Colorway">Colorway</a></th>
+    </tr>
+
+
+</table>
+    <br>
+<div class="text-center">
+    <h1 class="display-4">SNEAKER ROCK </h1>
+    <br>
+    <h3>Soles To Rock!!!</h3>
+</div>
+    <br>
+<div>
+    <p><a asp-controller="Collection" asp-action="Collection">Collection</a></p>
+    <br>
+    <p><a asp-controller="Brand" asp-action="Brand">Brand</a></p>
+    <br>
+    <p><a asp-controller="BrandName" asp-action="BrandName">Brand Name</a></p>
+    <br>
+    <p><a asp-controller="Style" asp-action="Style">Style</a></p>
+    <br>
+    <p><a asp-controller="ColorWay" asp-action="ColorWay">Colorway</a></p>
+</div>

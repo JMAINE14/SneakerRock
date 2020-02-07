@@ -1,0 +1,26 @@
+﻿@model SneakerRock.ViewModels.AddSneakerViewModel
+
+<h1>Do Yo Thang!</h1>
+
+<form asp-controller="Sneaker" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="Brand"></label>
+        <input class="form-control" asp-for="Brand" />
+    </div>
+    <div class="form-group">
+        <label asp-for="BrandName"></label>
+        <input class="form-control" asp-for="BrandName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Style"></label>
+        <input class="form-control" asp-for="Style" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Colorway"></label>
+        <input class="form-control" asp-for="Colorway" />
+    </div>
+
+    <input type="submit" value="Add Sneaker" />
+
+</form>

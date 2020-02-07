@@ -4,14 +4,19 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using SneakerRock.Models;
+//using Microsoft.Extensions.Logging;
+//using SneakerRock.Models;
 
 namespace SneakerRock.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
         {
             return View();
         }

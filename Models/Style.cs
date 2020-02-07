@@ -5,15 +5,14 @@ using System.Threading.Tasks;
 
 namespace SneakerRockMVC.Models
 {
-    public class ColorWay
+    public class Style
     {
         public string Name { get; set; }
         public int ID { get; set; }
 
+        public int BrandNameID { get; set; }
+        public BrandName BrandName { get; set; }
 
-        public int StyleID { get; set; }
-        public Style Style { get; set; }
-
-        public IList<Sneaker> Sneakers { get; set; }
+        public IList<ColorWay> ColorWays { get; set; }
     }
 }
